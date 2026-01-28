@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grúas Monkey | Maipú y Santiago Centro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FBC02D; 
+            --whatsapp: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html { 
+            height: 100%; 
+            font-family: 'Arial Black', sans-serif; 
+            color: white;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo-box img {
+            height: 150px;
+            filter: drop-shadow(0 0 15px var(--primary));
+            margin-top: 20px;
+        }
+
+        h1 { font-size: 2.5rem; color: var(--primary); text-shadow: 3px 3px 10px #000; margin-bottom: 20px; }
+
+        /* POR QUÉ ELEGIRNOS */
+        .why-us {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 20px;
+            border: 2px solid var(--primary);
+            margin-bottom: 30px;
+            backdrop-filter: blur(5px);
+        }
+        .why-box i { font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; }
+        .why-box h3 { font-size: 0.9rem; color: var(--primary); text-transform: uppercase; }
+        .why-box p { font-size: 0.75rem; font-family: sans-serif; }
+
+        .cta-btns { display: flex; gap: 20px; justify-content: center; margin-bottom: 40px; }
+        .btn {
+            padding: 14px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+        .btn-phone { background: var(--primary); color: #000; }
+        .btn-whatsapp { background: var(--whatsapp); color: #fff; }
+
+        /* SERVICIOS BOXES */
+        .services-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .service-card {
+            height: 220px; 
+            border: 3px solid var(--primary);
+            border-radius: 15px;
+            overflow: hidden;
+            background: #222; /* Fondo por si la imagen tarda en cargar */
+            transition: 0.3s ease;
+        }
+
+        .service-card img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover { transform: scale(1.02); }
+        .service-card:hover img { transform: scale(1.1); }
+
+        .services-footer-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px #000;
+        }
+
+        .map-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+            border: 4px solid var(--primary);
+            border-radius: 20px;
+            overflow: hidden;
+            height: 280px;
+        }
+
+        @media (max-width: 768px) {
+            .why-us { grid-template-columns: repeat(2, 1fr); }
+            .services-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <header class="logo-box">
+            <img src="logo.jpg" alt="Grúas Monkey">
+            <h1>GRÚAS MONKEY</h1>
+        </header>
+
+        <div class="why-us">
+            <div class="why-box"><i class="fas fa-bolt"></i><h3>Rapidez</h3><p>Llegada inmediata.</p></div>
+            <div class="why-box"><i class="fas fa-shield-alt"></i><h3>Seguridad</h3><p>Cuidado total.</p></div>
+            <div class="why-box"><i class="fas fa-hand-holding-usd"></i><h3>Precios</h3><p>Tarifas justas.</p></div>
+            <div class="why-box"><i class="fas fa-clock"></i><h3>24/7</h3><p>Siempre alertas.</p></div>
+        </div>
+
+        <div class="cta-btns">
+            <a href="tel:+56988833265" class="btn btn-phone"><i class="fas fa-phone-alt"></i> LLAMAR</a>
+            <a href="https://wa.me/56988833265" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+        </div>
+
+        <div class="services-row">
+            <div class="service-card"><img id="s1" src=""></div>
+            <div class="service-card"><img id="s2" src=""></div>
+            <div class="service-card"><img id="s3" src=""></div>
+        </div>
+        
+        <h2 class="services-footer-title">Servicios realizados</h2>
+
+        <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106487.89379844883!2d-70.7816812!3d-33.51333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c35661678179%3A0xe50606060c1d320e!2zR3LDunFzIE1vbmtleQ!5e0!3m2!1ses-419!2scl!4v1700000000000" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function loadImages() {
+            const total = 10; // Ajusta según la cantidad de fotos en /service/
+            let indices = [];
+            while(indices.length < 3) {
+                let r = Math.floor(Math.random() * total) + 1;
+                if(indices.indexOf(r) === -1) indices.push(r);
+            }
+            // Importante: Las fotos deben estar en la carpeta 'service/' y llamarse service1.jpg, etc.
+            document.getElementById('s1').src = `service/service${indices[0]}.jpg`;
+            document.getElementById('s2').src = `service/service${indices[1]}.jpg`;
+            document.getElementById('s3').src = `service/service${indices[2]}.jpg`;
+        }
+        window.onload = loadImages;
+    </script>
+</body>
+</html>
